@@ -1,13 +1,14 @@
 // import React, { Component } from 'react'
-import React from 'react'
-import './App.css'
+import React from "react";
+import "./App.css";
 // import { scaleLinear } from 'd3-scale'
 // import { max } from 'd3-array'
 // import { select } from 'd3-selection'
 
-import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
+import ReactDOM from "react-dom";
+import App from "./App";
+import "./index.css";
+
 // class BarChart extends Component {
 //    constructor(props){
 //       super(props)
@@ -30,13 +31,13 @@ import './index.css';
 //       .data(this.props.data)
 //       .enter()
 //       .append('rect')
-   
+
 //    select(node)
 //       .selectAll('rect')
 //       .data(this.props.data)
 //       .exit()
 //       .remove()
-   
+
 //    select(node)
 //       .selectAll('rect')
 //       .data(this.props.data)
@@ -52,7 +53,4 @@ import './index.css';
 //       </svg>
 //    }
 // }
-ReactDOM.render(
-   <App />,
-   document.getElementById('chart')
- );
+ReactDOM.render(<App />, document.getElementById("chart"));

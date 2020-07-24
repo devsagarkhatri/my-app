@@ -1,35 +1,27 @@
-import React, {Component}  from 'react';
+import React from "react";
+import "../index.css";
 
-import C3Chart from 'react-c3js';
-import 'c3/c3.css';
-import '../index.css';
-
-const data = {
-  columns: [
-    ['data1', 30, 250, 100, 400, 150, 250],
-    ['data2', 30, 150, 100, 0, 250, 250]
-  ]
+const Header = (props) => {
+  return (
+    <div className="head">
+      <h1> My React App</h1>
+      <ul>
+        <li className="menu">Home</li>
+        <li className="menu">Body</li>
+        <li className="menu">Footer</li>
+        <li className="menu">About</li>
+      </ul>
+      <hr />
+      <nav className="navbar navbar-light bg-light">
+        <a href="#" className="navbar-brand">
+          Navbar{" "}
+          <span className="badeg badge-pill badge-secondary">
+            {props.totalCounters}
+          </span>
+        </a>
+      </nav>
+    </div>
+  );
 };
 
-class Header extends Component {
-    render() {
-      return (
-          <div class='head'>
-
-            <h1> My React App</h1>
-            <ul>
-              <li class='menu'>Home</li>
-              <li class='menu'>Body</li>
-              <li class='menu'>Footer</li>
-              <li class='menu'>About</li>
-            </ul>
-            <hr/>
-            <br/><br/>
-          </div>
-        
-      );
-    }
-  
-  }
-
-  export default Header
+export default Header;

@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/header";
 import Counters from "./components/counters";
 import Footer from "./components/Footer";
+import Todos from "./components/todos";
 import "bootstrap/dist/css/bootstrap.css";
 
 class App extends Component {
@@ -57,6 +58,8 @@ class App extends Component {
           onIncrement={this.handleIncrement}
           onZero={this.handleZero}
         />
+        <hr style={{ color: "black" }}></hr>
+        <Todos />
         <Footer />
       </div>
     );

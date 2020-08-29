@@ -1,0 +1,8 @@
+th {
+  padding: 10px;
+}
+td {
+  border: 0px black dashed;
+  width: 80px;
+  text-align: center;
+}

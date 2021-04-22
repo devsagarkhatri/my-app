@@ -16,7 +16,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="content container row m-auto">
-          <Router>
+          
             <Switch>
               <Route path="/Home" render={() => <Movies />} />
               <Route path="/Counter" render={() => <CounterPanel />} />
@@ -27,7 +27,7 @@ class App extends Component {
               <Redirect from="/" to="/Home" />
               <Redirect to="/not-found" />
             </Switch>
-          </Router>
+          
         </div>
         
       </div>

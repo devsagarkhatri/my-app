@@ -1,0 +1,26 @@
+td {
+  text-align: left;
+}
+.tablem {
+  margin-right: 10px;
+  margin-left: 5px;
+}
+.main_head {
+  border: 0px solid grey;
+  padding: 10px;
+  border-radius: 50px;
+  background-repeat: no-repeat;
+  align-content: center;
+  text-align: center;
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.15) !important;
+  margin-top: 0px !important;
+  width: 100% !important;
+  height: 50px;
+  left: 0px;
+  top: 0px;
+}
+.headMenu {
+  border-radius: 0px 0px 50px 50px;
+}
+.fullDiv {
+}

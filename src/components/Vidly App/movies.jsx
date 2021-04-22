@@ -10,18 +10,23 @@ import "./movies.css";
 import "./../../../node_modules/bootstrap/dist/css/bootstrap.css";
 
 class Movies extends Component {
+  
   state = {
     movies: [],
     genres: [],
     currentPage: 1,
+    selectedGenre:[],
     pageSize: 4,
-    sortColumn: { path: "title", order: "asc" },
+    sortColumn: { path: "genre", order: "asc" },
   };
 
   componentDidMount() {
     const genres = [{ name: "All Genres" }, ...getGenres()];
-    this.setState({ movies: getMovies(), genres: genres });
+    this.setState({ movies: getMovies(), genres: genres });        
   }
+  
+  componentDidUpdate(){}
+
   handleLike = (movie) => {
     const movies = [...this.state.movies];
     const index = movies.indexOf(movie);
@@ -29,19 +34,30 @@ class Movies extends Component {
     movies[index].liked = !m.liked;
     this.setState({ movies: movies });
   };
+  
   handleDelete = (movie) => {
     const movies = this.state.movies.filter((m) => m._id !== movie._id);
     this.setState({ movies: movies });
   };
+  
   handlePageChange = (page) => {
     this.setState({ currentPage: page });
+    // console.log(this.state.currentPage);
   };
+  
   handleGenreSelect = (genre) => {
-    this.setState({ selectedGenre: genre, currentPage: 1 }); //ye kyun kiye currentPage: 1
+    console.log("genre ",genre);
+    var res=[ ...this.state ];
+    res.selectedGenre = genre;
+    res.currentPage=1;
+    this.setState({ res });
+    console.log(this.state.selectedGenre);
   };
+
   handleSort = (path) => {
     this.setState({ sortColumn: { path, order: "asc" } });
   };
+  
 
   render() {
     const { length: count } = this.state.movies;
@@ -67,10 +83,11 @@ class Movies extends Component {
         </React.Fragment>
       );
 
-    const filtered =
+      const filtered =
       selectedGenre && selectedGenre._id //&& ke aage ki condition kya kr rhi hai
         ? allMovies.filter((m) => m.genre.name === selectedGenre.name)
         : allMovies;
+    
 
     const sorted = _.orderBy(filtered, [sortColumn.path], [sortColumn.order]);
 
@@ -93,6 +110,7 @@ class Movies extends Component {
           <div className="col-3">
             <ListGroup
               items={this.state.genres}
+              key={this.props._id}
               selectedItem={this.state.selectedGenre}
               onItemSelect={this.handleGenreSelect}
             />

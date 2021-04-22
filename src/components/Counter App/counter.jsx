@@ -16,41 +16,50 @@ class Counter extends Component {
   };
 
   render() {
-    console.log(this.props.counter.value);
-
     return (
-      <table>
-        <tr>
-          <td>
-            <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
-          </td>
-          <td>
-            <button
-              onClick={() => this.props.onIncrement(this.props.counter.id)}
-              className="btn btn-secondary btn-sm m-3"
-            >
-              {" "}
-              Increment
-            </button>
-          </td>
-          <td>
-            <button
-              onClick={() => this.props.onDelete(this.props.counter.id)}
-              className="btn btn-danger btn-sm m-3"
-            >
-              Delete
-            </button>
-          </td>
-          <td>
-            <button
-              onClick={() => this.props.onZero(this.props.counter.id)}
-              className="btn btn-secondary btn-sm"
-            >
-              Make Zero
-            </button>
-          </td>
-        </tr>
-      </table>
+        <React.Fragment>
+          <tr>
+            <td>
+              <span className={this.getBadgeClasses()}>
+                {this.formatCount()}
+              </span>
+            </td>
+            <td>
+              <button
+                onClick={() => this.props.onIncrement(this.props.counter.id)}
+                className="btn btn-primary btn-sm m-3"
+              >
+                {" "}
+                Increment
+              </button>
+            </td>
+            <td>
+              <button
+                onClick={() => this.props.onZero(this.props.counter.id)}
+                className="btn btn-secondary btn-sm"
+              >
+                Make Zero
+              </button>
+            </td>
+            <td>
+              <button
+                onClick={() => this.props.onDecrement(this.props.counter.id)}
+                className="btn btn-warning btn-sm m-3"
+              >
+                Decrement
+              </button>
+            </td>
+            
+            <td>
+              <button
+                onClick={() => this.props.onDelete(this.props.counter.id)}
+                className="btn btn-danger btn-sm m-3"
+              >
+                Delete
+              </button>
+            </td>
+          </tr>
+        </React.Fragment>
     );
   }
 

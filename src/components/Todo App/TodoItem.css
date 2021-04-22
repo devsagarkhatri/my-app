@@ -5,15 +5,19 @@ body {
 .todo-list {
   background-color: thistle;
   margin: auto;
+  margin-top: 15px;
   width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 1px solid #efefef;
-
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 10px 0 -5px #eee,
-    0 10px 1px -4px rgba(0, 0, 0, 0.15), 0 20px 0 -10px #eee,
-    0 20px 1px -9px rgba(0, 0, 0, 0.15);
+  border-radius: 30px;
+  box-shadow: 
+    0px 1px 1px 0px rgba(0, 0, 0, 0.15),
+    0px 10px 0px -5px #eee,
+    0px 10px 1px -4px rgba(0, 0, 0, 0.15),
+    0px 20px 0px -10px #eee,
+    0px 20px 1px -9px rgba(0, 0, 0, 0.15);
   padding: 30px;
 }
 
@@ -22,12 +26,71 @@ body {
   justify-content: flex-start;
   align-items: center;
   padding: 30px 20px 0;
-  width: 70%;
+  width: 100%;
   border-bottom: 1px solid #cecece;
   font-family: Roboto, sans-serif;
   font-weight: 100;
+  color:red;
+  text-transform: uppercase;
+}
+.todo-item-check{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 30px 20px 0;
+  width: 100%;
+  border-bottom: 1px solid #cecece;
+  font-family: Roboto, sans-serif;
+  font-weight: 100;
+  color:green;
+  text-transform: capitalize;
+  font-style: italic;
+  
 }
 
-input[type="checkbox"] {
-  margin-right: 10px;
+.deletebtn{
+  margin-right:15px;
+  padding:5px; 
+  border:1px !important;
+  outline:none !important;
+}
+.deletebtn:focus{
+  outline:none !important;
+}
+.hide{
+  visibility: hidden;
+}
+.checkboxClass {
+  appearance:none;
+  width: 30px;
+  height: 30px;
+  background-color: transparent ;
+  border-radius: 15px;
+  text-align: center;
+  color:red;
+  text-decoration: none !important;
+}
+.checkboxClass:focus , .checkboxClass:focus-visible , .checkboxClass:focus-within{
+  outline: none;
+}
+.checkboxClass:checked::before{
+  content:"🎖️";
+  color: white;
+  vertical-align: middle;
+  padding: initial;
+  font-weight: bolder;
+  font-size: 24px;
+}
+.checkboxClass:not(:checked)::before{
+  content:"🎯";
+  color: white;
+  vertical-align: top;
+  padding: initial;
+  font-weight: bolder;
+  font-size: 24px;
+}
+
+p{
+  padding-top: 15px;
+  border: 0px solid black;
 }

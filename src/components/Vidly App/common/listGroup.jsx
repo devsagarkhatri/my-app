@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
 const ListGroup = (props) => {
   const {
@@ -11,16 +12,23 @@ const ListGroup = (props) => {
 
   return (
     <ul className="list-group">
+      
       {items.map((item) => (
-        <li
-          onClick={() => onItemSelect(item)}
-          key={item[valueProperty]}
-          className={
-            item === selectedItem ? "list-group-item active" : "list-group-item"
-          }
+        <Link key={item.name}
+        to={"/" + item[valueProperty] + "?"}           
         >
-          {item[textProperty]}
-        </li>
+          <li
+            key={item[valueProperty]}
+            onClick={() => onItemSelect(item)}             
+            className={
+              item === selectedItem
+                ? "list-group-item active"
+                : "list-group-item"
+            }
+          >
+            {item[textProperty]}
+          </li>
+        </Link>
       ))}
     </ul>
   );

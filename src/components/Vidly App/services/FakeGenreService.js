@@ -1,18 +1,18 @@
 const genres = [
   {
-    _id: 111,
+    _id: 1,
     name: "Action",
   },
   {
-    _id: 112,
+    _id: 2,
     name: "Comedy",
   },
   {
-    _id: 113,
+    _id: 3,
     name: "Thriller",
   },
   {
-    _id: 114,
+    _id: 4,
     name: "Romance",
   },
 ];

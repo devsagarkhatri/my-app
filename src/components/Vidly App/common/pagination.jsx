@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React from "react";
 import _ from "lodash"; //underscore lib
 import PropTypes from "prop-types";
 
 const Pagination = (props) => {
   const { itemsCount, pageSize, onPageChange, currentPage } = props;
-  console.log(currentPage);
+  // console.log(currentPage);
 
   const pagesCount = Math.ceil(itemsCount / pageSize);
 

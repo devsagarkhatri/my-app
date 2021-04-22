@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect, Router } from "react-router-dom";
 import Header from "./components/header";
 // import Footer from "./components/Footer";
 import CounterPanel from "./components/Counter App/counterPanel";
@@ -16,16 +16,18 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="content container row m-auto">
-          <Switch>
-            <Route path="/Home" render={() => <Movies />} />
-            <Route path="/Counter" render={() => <CounterPanel />} />
-            <Route path="/Todo" render={() => <Todos />} />
-            <Route path="/Chart" render={() => <Chart />} />
-            <Route path="/not-found" render={() => <NotFound />} />
-            <Route path="/" exact render={() => <Movies />} />
-            <Redirect from="/" to="/Home" />
-            <Redirect to="/not-found" />
-          </Switch>
+          <Router>
+            <Switch>
+              <Route path="/Home" render={() => <Movies />} />
+              <Route path="/Counter" render={() => <CounterPanel />} />
+              <Route path="/Todo" render={() => <Todos />} />
+              <Route path="/Chart" render={() => <Chart />} />
+              <Route path="/not-found" render={() => <NotFound />} />
+              <Route path="/" exact render={() => <Movies />} />
+              <Redirect from="/" to="/Home" />
+              <Redirect to="/not-found" />
+            </Switch>
+          </Router>
         </div>
         
       </div>

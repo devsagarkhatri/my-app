@@ -4,7 +4,7 @@ import notFound from "./../notFound.png";
 
 class NotFound extends Component {
   render() {
-    return <img src={notFound} height="780px" alt="" />;
+    return (<img src={notFound} height="780px" alt="" />);
   }
 }
 

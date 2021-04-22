@@ -2,7 +2,7 @@
   "homepage": "https://devsagarkhatri.github.io/my-app",
   "name": "my-app",
   "version": "0.1.0",
-  "private": true,
+
   "dependencies": {
     "@types/jest": "25.2.3",
     "@types/node": "14.0.6",

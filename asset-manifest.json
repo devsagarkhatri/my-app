@@ -1,7 +1,12 @@
 {
-  "main.css": "static/css/main.02af2cc5.css",
-  "main.css.map": "static/css/main.02af2cc5.css.map",
-  "main.js": "static/js/main.be862b06.js",
-  "main.js.map": "static/js/main.be862b06.js.map",
-  "static/media/notFound.png": "static/media/notFound.f4ee2a26.png"
+  "main.css": "static/css/main.a5027bb1.css",
+  "main.css.map": "static/css/main.a5027bb1.css.map",
+  "main.js": "static/js/main.3859a1e7.js",
+  "main.js.map": "static/js/main.3859a1e7.js.map",
+  "static/media/headphone.jpg": "static/media/headphone.c9494f72.jpg",
+  "static/media/notFound.png": "static/media/notFound.f4ee2a26.png",
+  "static/media/suit.jpg": "static/media/suit.9b53ca0e.jpg",
+  "static/media/sunglasses.jpg": "static/media/sunglasses.c4b3a088.jpg",
+  "static/media/trimmer.jpg": "static/media/trimmer.a67fdc5d.jpg",
+  "static/media/watch.jpg": "static/media/watch.bf8a97c7.jpg"
 }

@@ -24,23 +24,23 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item m-2 ">
-              <Link className="nav-link" to="/">
+              <Link className="nav-link" to="/my-app/Movies">
                 Home
               </Link>
             </li>
             <li className="nav-item m-2">
-              <Link className="nav-link" to="/Counter">
+              <Link className="nav-link" to="/my-app/Counter">
                 Counter App
               </Link>
             </li>
             <li className="nav-item m-2">
-              <Link className="nav-link" to="/Todo">
+              <Link className="nav-link" to="/my-app/Todo">
                 Todo App
               </Link>
             </li>
 
             <li className="nav-item m-2">
-              <Link className="nav-link" to="/Chart">
+              <Link className="nav-link" to="/my-app/Chart">
                 Chart App
               </Link>
             </li>

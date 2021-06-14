@@ -18,7 +18,7 @@ class App extends Component {
         <Header />
         <div className="content container row m-auto">
           <Switch>
-            <Route path="/my-app/Home" render={() => <Movies />} />            
+            <Route path="/my-app/Movies" render={() => <Movies />} />            
             <Route path="/my-app/Counter" render={() => <MerchKartPanel />} />
             <Route path="/my-app/Todo" render={() => <Todos />} />
             <Route path="/my-app/Chart" render={() => <Chart />} />
@@ -30,7 +30,7 @@ class App extends Component {
             <Route path="/Chart" render={() => <Chart />} />
             <Route path="/not-found" render={() => <NotFound />} /> */}
             <Route path="/" exact render={() => <Movies />} />
-            <Redirect from="/" to="/my-app/Home" />
+            <Redirect from="/" to="/my-app/" />
             <Redirect to="/not-found" />
           </Switch>
         </div>

@@ -1,0 +1,29 @@
+table img {
+  max-width: 330px !important;
+  min-width: 330px !important;
+  min-height: 233px !important;
+  max-height: 233px !important;
+}
+
+.cart-btn {
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.scrollList {
+  overflow-x: scroll;
+  border: 0px red dashed;
+  padding-right: 25px;
+}
+.scrollList::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.scrollList::-webkit-scrollbar-track {
+  background-color: #dfdfdf;
+  border-radius: 10px;
+}
+.scrollList::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}

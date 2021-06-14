@@ -1,0 +1,15 @@
+th {
+  padding: 10px;
+}
+td {
+  border: 0px black dashed;
+  width: 80px;
+  text-align: center;
+}
+
+.thumbimg {
+  max-width: 66px !important;
+  min-width: 66px !important;
+  min-height: 58px !important;
+  max-height: 58px !important;
+}
